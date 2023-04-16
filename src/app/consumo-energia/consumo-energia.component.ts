@@ -11,8 +11,8 @@ export class ConsumoEnergiaComponent {
   comodos: number = 0;
   tvs: number = 0;
   computadores: number = 0;
-  maquinaLavar: boolean = true;
-  secadora: boolean = true;
+  maquinaLavar: boolean = false;
+  secadora: boolean = false;
   tarifa: number = 0;
   consumo: number = 0;
   valorConta: number = 0;

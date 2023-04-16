@@ -19,12 +19,27 @@
       </div>
       <div class="form-group">
         <label for="maquinaLavar">Possui máquina de lavar roupas?</label>
-        <input type="checkbox" class="form-control" id="maquinaLavar" [(ngModel)]="maquinaLavar" name="maquinaLavar">
-      </div>
+        <div>
+            <input type="checkbox" id="maquinaLavar" [(ngModel)]="secadora" name="maquinaLavar" value="true">
+            <label for="maquinaLavar">Sim</label>
+          </div>
+          <div>
+            <input type="checkbox" id="maquinaLavar" [(ngModel)]="secadora" name="maquinaLavar" value="false">
+            <label for="maquinaLavar">Não</label>
+          </div>
+    </div>
       <div class="form-group">
         <label for="secadora">Possui secadora de roupas?</label>
-        <input type="checkbox" class="form-control" id="secadora" [(ngModel)]="secadora" name="secadora">
+        <div>
+          <input type="checkbox" id="secadora" [(ngModel)]="secadora" name="secadora" value="true">
+          <label for="secadora">Sim</label>
+        </div>
+        <div>
+          <input type="checkbox" id="secadora" [(ngModel)]="secadora" name="secadora" value="false">
+          <label for="secadora">Não</label>
+        </div>
       </div>
+      
       <div class="form-group">
         <label for="tarifa">Valor da tarifa energética:</label>
         <input type="number" class="form-control" id="tarifa" [(ngModel)]="tarifa" name="tarifa">
