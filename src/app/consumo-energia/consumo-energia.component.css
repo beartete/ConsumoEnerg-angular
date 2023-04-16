@@ -9,8 +9,14 @@
   
   .resultado {
     margin-top: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #b45cd6;
     padding: 20px;
     border-radius: 5px;
   }
   
+.btn-primary {
+    color: white ;
+    background: #c47de0;
+    width: 180px;
+    border: rgba(255, 255, 255, 0.863);
+}

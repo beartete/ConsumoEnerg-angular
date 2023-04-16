@@ -20,36 +20,35 @@
       <div class="form-group">
         <label for="maquinaLavar">Possui máquina de lavar roupas?</label>
         <div>
-            <input type="checkbox" id="maquinaLavar" [(ngModel)]="secadora" name="maquinaLavar" value="true">
-            <label for="maquinaLavar">Sim</label>
-          </div>
-          <div>
-            <input type="checkbox" id="maquinaLavar" [(ngModel)]="secadora" name="maquinaLavar" value="false">
-            <label for="maquinaLavar">Não</label>
-          </div>
-    </div>
+          <input type="radio" id="maquinaLavarSim" [(ngModel)]="maquinaLavar" name="maquinaLavar" value="Sim">
+          <label for="maquinaLavarSim">Sim</label>
+        </div>
+        <div>
+          <input type="radio" id="maquinaLavarNao" [(ngModel)]="maquinaLavar" name="maquinaLavar" value="Não">
+          <label for="maquinaLavarNao">Não</label>
+        </div>
+      </div>
       <div class="form-group">
         <label for="secadora">Possui secadora de roupas?</label>
         <div>
-          <input type="checkbox" id="secadora" [(ngModel)]="secadora" name="secadora" value="true">
-          <label for="secadora">Sim</label>
+          <input type="radio" id="secadoraSim" [(ngModel)]="secadora" name="secadora" value="Sim">
+          <label for="secadoraSim">Sim</label>
         </div>
         <div>
-          <input type="checkbox" id="secadora" [(ngModel)]="secadora" name="secadora" value="false">
-          <label for="secadora">Não</label>
+          <input type="radio" id="secadoraNao" [(ngModel)]="secadora" name="secadora" value="Não">
+          <label for="secadoraNao">Não</label>
         </div>
-      </div>
+      </div>        
       
       <div class="form-group">
         <label for="tarifa">Valor da tarifa energética:</label>
-        <input type="number" class="form-control" id="tarifa" [(ngModel)]="tarifa" name="tarifa">
+        <input type="number" class="form-control" id="tarifa" [(ngModel)]="tarifa" name="tarifa" value="0.649">
       </div>
-      <button type="button" class="btn btn-primary" (click)="calcularConsumo()">Calcular</button>
+      <button class="btn btn-primary" (click)="calcularConsumo()">Calcular</button>
     </form>
     <div class="resultado" *ngIf="valorConta">
       <h2>Resultado</h2>
       <p>Consumo elétrico: {{ consumo }} kW</p>
       <p>Valor da conta: R$ {{ valorConta | number:'1.2-2' }}</p>
     </div>
-  </div>
   
