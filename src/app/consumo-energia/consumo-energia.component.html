@@ -1,0 +1,40 @@
+<div class="container">
+    <h1>{{ title }}</h1>
+    <form>
+      <div class="form-group">
+        <label for="pessoas">Quantidade de pessoas na casa:</label>
+        <input type="number" class="form-control" id="pessoas" [(ngModel)]="pessoas" name="pessoas">
+      </div>
+      <div class="form-group">
+        <label for="comodos">Quantidade de cômodos na casa:</label>
+        <input type="number" class="form-control" id="comodos" [(ngModel)]="comodos" name="comodos">
+      </div>
+      <div class="form-group">
+        <label for="tvs">Quantidade de TVs na casa:</label>
+        <input type="number" class="form-control" id="tvs" [(ngModel)]="tvs" name="tvs">
+      </div>
+      <div class="form-group">
+        <label for="computadores">Quantidade de computadores na casa:</label>
+        <input type="number" class="form-control" id="computadores" [(ngModel)]="computadores" name="computadores">
+      </div>
+      <div class="form-group">
+        <label for="maquinaLavar">Possui máquina de lavar roupas?</label>
+        <input type="checkbox" class="form-control" id="maquinaLavar" [(ngModel)]="maquinaLavar" name="maquinaLavar">
+      </div>
+      <div class="form-group">
+        <label for="secadora">Possui secadora de roupas?</label>
+        <input type="checkbox" class="form-control" id="secadora" [(ngModel)]="secadora" name="secadora">
+      </div>
+      <div class="form-group">
+        <label for="tarifa">Valor da tarifa energética:</label>
+        <input type="number" class="form-control" id="tarifa" [(ngModel)]="tarifa" name="tarifa">
+      </div>
+      <button type="button" class="btn btn-primary" (click)="calcularConsumo()">Calcular</button>
+    </form>
+    <div class="resultado" *ngIf="valorConta">
+      <h2>Resultado</h2>
+      <p>Consumo elétrico: {{ consumo }} kW</p>
+      <p>Valor da conta: R$ {{ valorConta | number:'1.2-2' }}</p>
+    </div>
+  </div>
+  
