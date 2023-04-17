@@ -15,7 +15,7 @@ export class ConsumoEnergiaComponent {
   secadora: string = 'Não';
   consumo: number = 0;
   valorConta: number = 0;
-  tarifa: number = 0.649;
+  tarifa: number = 0.62854;
 
   calcularConsumo(): void {
     let consumoComodos = this.comodos * 100;
@@ -25,9 +25,9 @@ export class ConsumoEnergiaComponent {
     let consumoMaquinaLavar = this.maquinaLavar === 'Sim' ? 300 : 0;
     let consumoSecadora = this.secadora === 'Sim' ? 350 : 0;
 
-    this.consumo = consumoComodos + consumoPessoas + consumoTvs + consumoComputadores + consumoMaquinaLavar + consumoSecadora;
+    this.consumo = (consumoComodos + consumoPessoas + consumoTvs + consumoComputadores + consumoMaquinaLavar + consumoSecadora) / 1000;
 
-    let consumoChuveiro = (5500 * 10) / 60 / 1000;
+    let consumoChuveiro = (5500 * 10/60) * this.pessoas * 30;
     this.consumo += consumoChuveiro;
 
     this.valorConta = this.consumo * this.tarifa;
